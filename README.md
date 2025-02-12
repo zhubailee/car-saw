@@ -86,4 +86,22 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
+## Documentation
+![home](https://github.com/user-attachments/assets/34e50125-31de-467b-91e6-eeaabe6badfe)
+
+![login](https://github.com/user-attachments/assets/3e9536e0-5ccd-4bd8-a751-37304cc4946c)
+
+![dashboard](https://github.com/user-attachments/assets/ceda8a49-14dd-4f00-90a5-be90ad8931b2)
+
+![alternative](https://github.com/user-attachments/assets/94a75edf-6f61-4960-ad83-f4ce4ed03c87)
+
+![criteria](https://github.com/user-attachments/assets/9e2edcbe-d285-4a6c-9d9f-f42489008ce5)
+
+![subcriteria](https://github.com/user-attachments/assets/3e96e31e-7ebd-4e60-9d95-2b10a57dd19f)
+
+![calculation](https://github.com/user-attachments/assets/e67caeff-61dd-4541-bf5c-ecc701c00558)
+
+![biodata](https://github.com/user-attachments/assets/214ad240-7445-405b-adf9-c75c1e74944d)
+
+
 Developed with ❤️ by [Zhubailee](https://github.com/zhubailee).
