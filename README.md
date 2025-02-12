@@ -13,7 +13,7 @@ Car SAW is a web-based application that utilizes the Simple Additive Weighting (
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**: MySQL
-- **Framework**: CodeIgniter (optional, if used)
+- **Framework**: Laravel
 
 ## Installation
 Follow these steps to run this project locally:
