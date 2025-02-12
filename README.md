@@ -64,10 +64,10 @@ car-saw/
 
 ## Contribution
 Contributions are welcome! Please create a **Pull Request** for major changes or open an **Issue** to discuss ideas or bugs.
--[Instagram](https://www.instagram.com/zhu.code)
--[Saweria](https://saweria.co/zhubailee).
--[My blog](https://zhucode.wordpress.com)
--[tiktok saya](tiktok.com/nanazhu231124)
+- [Instagram](https://www.instagram.com/zhu.code)
+- [Saweria](https://saweria.co/zhubailee).
+- [My blog](https://zhucode.wordpress.com)
+- [tiktok](tiktok.com/nanazhu231124)
 
 ### How to Contribute
 1. Fork this repository.
