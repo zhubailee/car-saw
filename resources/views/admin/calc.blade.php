@@ -61,37 +61,43 @@
             <div class="accordion-collapse collapse" id="evaluationTable" data-bs-parent="calculationAccordion">
                 <div class="accordion-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-stripped">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2">#</th>
-                                    <th rowspan="2">Alternative (Car)</th>
-                                    <th colspan="{{ count($criteria) }}" class="text-center">Criteria</th>
-                                </tr>
-                                <tr>
-                                    @foreach ($criteria as $item)
-                                    <th>{{ $item->criteria_name }}</th>
+                        @if (!empty($evaluation) && count($evaluation) > 0)
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">#</th>
+                                        <th rowspan="2">Alternative (Car)</th>
+                                        <th colspan="{{ count($criteria) }}" class="text-center">Criteria</th>
+                                    </tr>
+                                    <tr>
+                                        @foreach ($criteria as $item)
+                                            <th>{{ $item->criteria_name }}</th>
+                                        @endforeach
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php $no = 1; @endphp
+                                    @foreach ($evaluation as $key => $value)
+                                        <tr>
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $key }}</td>
+                                            @foreach ($criteria as $item)
+                                                @php 
+                                                    $val = $evaluation[$key][$item->criteria_name] ?? collect(); 
+                                                @endphp
+                                                <td>{{ $val->isNotEmpty() ? $val->first() : '-' }}</td>
+                                            @endforeach
+                                        </tr>
                                     @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @php
-                                $no = 1
-                                @endphp
-                                @foreach ($evaluation as $key => $value)
-                                <tr>
-                                    <td>{{ $no++ }}</td>
-                                    <td>{{ $key }}</td>
-                                    @foreach ($evaluation[$key] as $k => $v)
-                                    @foreach ($evaluation[$key][$k] as $item)
-                                    <td>{{ $item }}</td>
-                                    @endforeach
-                                    @endforeach
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        @else
+                            <div class="alert alert-warning text-center" role="alert">
+                                Data evaluation not available.
+                            </div>
+                        @endif
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -105,6 +111,9 @@
             <div class="accordion-collapse collapse" id="normalizedTable" data-bs-parent="calculationAccordion">
                 <div class="accordion-body">
                     <div class="table-responsive">
+                        @if ($normalized == null)
+                        <p class="alert-danger">Data not available</p>
+                        @else
                         <table class="table table-hover table-stripped">
                             <thead>
                                 <tr>
@@ -133,6 +142,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -148,6 +158,9 @@
                 data-bs-parent="calculationAccordion">
                 <div class="accordion-body">
                     <div class="table-responsive">
+                        @if ($weightedNormalization == null)
+                        <p class="alert-danger">Data not available</p>
+                        @else
                         <table class="table table-hover table-stripped">
                             <thead>
                                 <tr>
@@ -176,6 +189,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -190,6 +204,9 @@
             <div class="accordion-collapse collapse" id="resultTable" data-bs-parent="calculationAccordion">
                 <div class="accordion-body">
                     <div class="table-responsive">
+                        @if ($result == null)
+                        <p class="alert-danger">Data not available</p>
+                        @else
                         <table class="table table-hover table-stripped">
                             <thead>
                                 <tr>
@@ -211,6 +228,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        @endif
                     </div>
                 </div>
             </div>
